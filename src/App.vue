@@ -8,6 +8,8 @@
       <component :is="Component" />
     </keep-alive>
   </router-view>
+
+  <img src="./assets/logo.png" alt="Vue Logo" class="logo" />
 </template>
 
 <style>
@@ -15,8 +17,13 @@
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
   color: #2c3e50;
   margin-top: 60px;
+}
+.logo {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  width: 100px;
 }
 </style>

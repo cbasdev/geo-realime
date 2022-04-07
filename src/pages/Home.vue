@@ -1,11 +1,26 @@
 <template>
   <div>
-    <h1>Home</h1>
+    <GMapView />
+    <GLocationButton />
+    <GSearchBar />
   </div>
 </template>
 
 <script lang="ts">
-export default {}
-</script>
+import { usePlacesStore } from '../hooks/usePlacesStore'
 
-<style lang="scss" scoped></style>
+import GMapView from '../components/GMapView/GMapView.vue'
+import GLocationButton from '../components/GLocationButton/GLocationButton.vue'
+import GSearchBar from '../components/GSearchBar/GSearchBar.vue'
+
+export default {
+  components: {
+    GMapView,
+    GLocationButton,
+    GSearchBar,
+  },
+  setup() {
+    usePlacesStore()
+  },
+}
+</script>
